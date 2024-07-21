@@ -1,29 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export function Menu() {
+export const Menu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMenu>
       <ul>
-        <li>
-          <a href="Home">Home</a>
-        </li>
-        <li>
-          <a href="Skills">Skills</a>
-        </li>
-        <li>
-          <a href="Works">Works</a>
-        </li>
-        <li>
-          <a href="Testimony">Testimony</a>
-        </li>
-        <li>
-          <a href="Contact">Contact</a>
-        </li>
+        {props.menuItems.map((item, index) => {
+          return (
+            <li key={index}>
+              <a href="">{item}</a>
+            </li>
+          );
+        })}
       </ul>
     </StyledMenu>
   );
-}
+};
 
 const StyledMenu = styled.nav`
   ul {
