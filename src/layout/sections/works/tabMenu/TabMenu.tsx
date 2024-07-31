@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+import { Link } from '../../../../components/Link';
 
 export const TabMenu = (props: { menuItems: Array<string> }) => {
   return (
@@ -18,29 +18,12 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledTabMenu = styled.nav`
+  margin-bottom: 40px;
   ul {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
   }
 `;
 
-/* const StyledTabMenu = styled.nav`
-  ul {
-    display: flex;
-    justify-content: space-between;
-    max-width: 352px;
-    width: 100%;
-    margin: 0 auto 40px;
-  }
-`;
- */
-
 const ListItem = styled.li``;
-
-const Link = styled.a`
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-`;
