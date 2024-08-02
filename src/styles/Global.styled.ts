@@ -20,27 +20,27 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.font};
     line-height: 1.2;
 
-
+    min-width: 360px;
   }
 
-    a {
+  a {
     text-decoration: none;
     color: ${theme.colors.font};
     cursor: pointer;
   }
 
-    ul {
+  ul {
     list-style: none;
   }
 
-    button {
+  button {
     background-color: unset;
     border: none;
     cursor: pointer;
     color: ${theme.colors.font};
 }
 
-    section {
+  section {
     padding: 100px 0;
     
   }

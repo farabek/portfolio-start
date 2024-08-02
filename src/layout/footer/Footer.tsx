@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon } from '../../components/icon/Icon';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 const socialItemsData = [
   {
@@ -41,12 +42,16 @@ export const Footer: React.FC = () => {
 };
 
 const StyledFooter = styled.footer`
+  background-color: ${theme.colors.primaryBg};
   padding: 40px 0;
   position: relative;
-  background-color: #ffd8a5;
 `;
 
 const Name = styled.span`
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 22px;
   letter-spacing: 3px;
 `;
 
@@ -67,8 +72,10 @@ const SocialLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: ${theme.colors.accent};
 
   &:hover {
+    color: ${theme.colors.primaryBg};
     transform: translateY(-4px);
   }
 `;

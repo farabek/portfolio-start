@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
-import { Menu } from '../../../components/menu/Menu';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Work } from './work/Work';
 import socialImg from './../../../assets/images/proj-1.png';
 import timerImg from './../../../assets/images/proj-2.png';
 import { Container } from '../../../components/Container';
+import { TabMenu } from './tabMenu/TabMenu';
 
 const worksItems = ['All', 'landing page', 'React', 'spa'];
 
@@ -15,7 +15,7 @@ export const Works = () => {
     <StyledWorks>
       <Container>
         <SectionTitle>My Works</SectionTitle>
-        <Menu menuItems={worksItems} />
+        <TabMenu menuItems={worksItems} />
         <FlexWrapper justify={'space-between'} align={'flex-start'}>
           <Work
             title={'Social Network'}
@@ -33,4 +33,10 @@ export const Works = () => {
   );
 };
 
-const StyledWorks = styled.section``;
+const StyledWorks = styled.section`
+  position: relative;
+
+  ${FlexWrapper} {
+    gap: 30px;
+  }
+`;

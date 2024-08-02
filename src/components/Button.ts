@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../styles/Theme';
 
 export const Button = styled.button`
   font-weight: 400;
@@ -22,6 +23,7 @@ export const Button = styled.button`
     display: inline-block;
     height: 10px;
     width: 50%;
+    background-color: ${theme.colors.accent};
     position: absolute;
     bottom: 0;
     left: 50%;

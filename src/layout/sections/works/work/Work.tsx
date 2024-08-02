@@ -44,6 +44,22 @@ const StyledWork = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
 
+  &:hover {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(2px);
+    }
+    ${Button} {
+      opacity: 1;
+    }
+  }
+
   ${Button} {
     opacity: 0;
     position: absolute;
@@ -54,35 +70,6 @@ const ImageWrapper = styled.div`
     &::before {
       width: 100%;
       height: 100%;
-    }
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
-    opacity: 0;
-  }
-
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-
-    ${Button} {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-
-    ${Button} {
-      opacity: 1;
     }
   }
 `;
