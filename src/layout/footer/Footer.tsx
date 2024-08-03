@@ -3,6 +3,7 @@ import { Icon } from '../../components/icon/Icon';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
+import { font } from '../../styles/Common';
 
 const socialItemsData = [
   {
@@ -48,10 +49,10 @@ const StyledFooter = styled.footer`
 `;
 
 const Name = styled.span`
-  font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: 3px;
-  font-weight: 700;
-  font-size: 22px;
+  ${font({ family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 22, Fmin: 16 })}
+  // font-family: 'Josefin Sans', sans-serif;
+  // font-weight: 700;
+  // font-size: 22px;
   letter-spacing: 3px;
 `;
 
