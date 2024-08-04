@@ -1,10 +1,10 @@
-import React from 'react';
+/* import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
 
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+export const DesktopMenu = (props: { menuItems: Array<string> }) => {
   return (
-    <StyledHeaderMenu>
+    <StyledDesktopMenu>
       <ul>
         {props.menuItems.map((item, index) => {
           return (
@@ -23,11 +23,11 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
           );
         })}
       </ul>
-    </StyledHeaderMenu>
+    </StyledDesktopMenu>
   );
 };
 
-const StyledHeaderMenu = styled.nav`
+const StyledDesktopMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
@@ -97,3 +97,49 @@ const ListItem = styled.li`
     }
   }
 `;
+ */
+
+// /////////////////////////////////////////////////
+
+// import React from 'react';
+// import styled from 'styled-components';
+// import { Menu } from '../menu/Menu';
+// import { theme } from '../../../../styles/Theme';
+
+// export const DesktopMenu: React.FC<{ menuItems: Array<string> }> = (props: {
+//   menuItems: Array<string>;
+// }) => {
+//   return (
+//     <StyledDesktopMenu>
+//       <Menu menuItems={props.menuItems} />
+//     </StyledDesktopMenu>
+//   );
+// };
+
+// const StyledDesktopMenu = styled.nav`
+//   ul {
+//     display: flex;
+//     gap: 30px;
+//     justify-content: center;
+//   }
+
+//   // @media ${theme.media.tablet} {
+//   //   display: none;
+//   // }
+// `;
+
+/////////////////////////////////////////////////
+
+import React from 'react';
+import { Menu } from '../menu/Menu';
+import { S } from '../HeaderMenu_Styles';
+
+export const DesktopMenu: React.FC<{ menuItems: Array<string> }> = (props: {
+  menuItems: Array<string>;
+}) => {
+  return (
+    <S.DesktopMenu>
+      <Menu menuItems={props.menuItems} />
+    </S.DesktopMenu>
+  );
+};
