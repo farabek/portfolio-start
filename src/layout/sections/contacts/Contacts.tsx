@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { Button } from '../../../components/Button';
@@ -62,3 +62,27 @@ const Field = styled.input`
     outline: 1px solid ${theme.colors.borderColor};
   }
 `;
+ */
+
+////////////////////////////////////////////////////
+
+import { SectionTitle } from '../../../components/SectionTitle';
+import { Button } from '../../../components/Button';
+import { Container } from '../../../components/Container';
+import { S } from './Contacts_Styles';
+
+export const Contact = () => {
+  return (
+    <S.Contacts>
+      <Container>
+        <SectionTitle>Contact</SectionTitle>
+        <S.Form>
+          <S.Field placeholder={'name'} />
+          <S.Field placeholder={'subject'} />
+          <S.Field placeholder={'message'} as={'textarea'} />
+          <Button type={'submit'}>Send message</Button>
+        </S.Form>
+      </Container>
+    </S.Contacts>
+  );
+};

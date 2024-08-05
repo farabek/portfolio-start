@@ -177,5 +177,3 @@ export const S = {
   BurgerButton,
   DesktopMenu,
 };
-
-// 37 минута

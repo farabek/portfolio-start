@@ -1,11 +1,11 @@
-import photo from '../../../assets/images/photo.jpg';
+/* import photo from '../../../assets/images/photo.jpg';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styles/Theme';
 import { font } from '../../../styles/Common';
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
     <StyledMain>
       <Container>
@@ -114,3 +114,33 @@ const SmallText = styled.h2`
   font-weight: 400;
   font-size: 14px;
 `;
+ */
+
+//////////////////////////////////////////////////
+
+import photo from '../../../assets/images/photo.jpg';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Container } from '../../../components/Container';
+import { S } from './Main_Styles';
+
+export const Main: React.FC = () => {
+  return (
+    <S.Main>
+      <Container>
+        <FlexWrapper align={'center'} justify={'space-around'} wrap={'wrap'}>
+          <div>
+            <S.SmallText>Hi There</S.SmallText>
+            <S.Name>
+              I am <span>Svetlana Dyablo</span>
+            </S.Name>
+            <S.MainTitle>A Web Developer. </S.MainTitle>
+          </div>
+
+          <S.PhotoWrapper>
+            <S.Photo src={photo} alt="" />
+          </S.PhotoWrapper>
+        </FlexWrapper>
+      </Container>
+    </S.Main>
+  );
+};

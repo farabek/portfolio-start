@@ -8,7 +8,7 @@ type IconPropsType = {
   viewBox?: string;
 };
 
-export function Icon(props: IconPropsType) {
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
   return (
     <svg
       width={props.width || '50'}
@@ -19,4 +19,4 @@ export function Icon(props: IconPropsType) {
       <use xlinkHref={`${iconsSprite}#${props.iconId}`} />
     </svg>
   );
-}
+};
